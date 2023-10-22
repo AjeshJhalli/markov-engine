@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Markov Text Generator</title>
+    <script src="https://unpkg.com/htmx.org@1.9.6"></script>
+  </head>
+  <body>
+    <h1>Markov Text Generator</h1>
+    <p>
+      This website generates messages by using a
+      <a href="https://en.wikipedia.org/wiki/Markov_chain">Markov chain</a>
+      on an existing text.
+      The Markov chain used here was loaded with the Shrek script.
+    </p>
+    <hr>
+    <button hx-post="/generate" hx-swap="outerHTML">
+      New Message
+    </button>
+  </body>
+</html>

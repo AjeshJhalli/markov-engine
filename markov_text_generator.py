@@ -6,7 +6,7 @@ class MarkovTextGenerator:
 
     word_dict = {}
 
-    def __init__(self, phrase_length=1):
+    def __init__(self, phrase_length=4):
         self.phrase_length = phrase_length
 
     def load_word_set(self, word_set_path, fallback_phrase_length=1):
@@ -148,14 +148,12 @@ class Translator:
         return word
 
 
-'''
+
 def main():
 
     generator = MarkovTextGenerator()
     translator = Translator()
-
-    words = translator.convert_to_words(''path/to/file.json')
-
+    words = translator.convert_to_words('wiki.txt');
     generator.add_words(words)
 
     while True:
@@ -165,4 +163,3 @@ def main():
 
 if __name__ == '__main__':
     main()
-'''
